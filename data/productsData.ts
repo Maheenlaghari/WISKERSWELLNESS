@@ -45,47 +45,29 @@ export const products: Product[] = [
   },
   {
     id: "3",
-    name: "Turkey Terrine",
-    slug: "turkey-terrine",
-    price: 5.0,
-    image: "/assets/product-1.jpe",
-    category: "wet food",
-    categoryLabel: "Wet Food",
-    sizes: ["3 oz", "5.5 oz"],
-    weight: "3 oz",
+    name: "Chicken Recipe",
+    slug: "chicken-recipe",
+    price: 19.0,
+    originalPrice: 25.0,
+    badge: "Sale",
+    image: "/assets/product-3.jpe",
+    category: "dry food",
+    categoryLabel: "Dry Food",
+    sizes: ["3 lb", "6 lb"],
+    weight: "3 lb",
     description:
-      "Delicate rustic terrine made with free range turkey and organic garden vegetables. Formulated for sensitive stomachs and discerning taste buds.",
+      "Crisp extruded kibble made with high proportion fresh deboned chicken and ancient grains. Delivers sustained energy and optimal dental cleaning action.",
     productInfo:
-      "Real turkey meat, organic sweet potatoes, and organic celery simmered to lock in natural moisture and pure aroma.",
+      "Fresh deboned chicken, green peas, chickpeas, organic flaxseed, and natural antioxidant rosemary extract.",
     shippingInfo:
-      "Dispatched within twenty four hours. Free delivery on orders exceeding forty dollars.",
+      "Heavy duty resealable packaging delivered safely to your doorstep.",
     refundPolicy:
-      "Guaranteed happiness for your feline companion or full reimbursement.",
+      "Full refund guarantee if your cat does not eagerly finish the bag.",
     inStock: true,
     featured: true,
   },
   {
     id: "4",
-    name: "Chicken Bites",
-    slug: "chicken-bites",
-    price: 5.0,
-    image: "/assets/product-4.jpe",
-    category: "cat treats",
-    categoryLabel: "Cat Treats",
-    sizes: ["2 oz", "4 oz"],
-    weight: "2 oz",
-    description:
-      "Single ingredient freeze dried raw chicken morsels. Crunchy bite sized treats that preserve all raw nutrients and intense natural flavor.",
-    productInfo:
-      "One single wholesome ingredient: One hundred percent pure organic chicken breast. No artificial colors or preservatives.",
-    shippingInfo:
-      "Freshly sealed foil packs shipped promptly in eco friendly parcels.",
-    refundPolicy:
-      "Return anytime within thirty days if not entirely pleased.",
-    inStock: true,
-  },
-  {
-    id: "5",
     name: "Salmon Bites",
     slug: "salmon-bites",
     price: 5.0,
@@ -105,23 +87,23 @@ export const products: Product[] = [
     inStock: true,
   },
   {
-    id: "6",
-    name: "Turkey Bites",
-    slug: "turkey-bites",
-    price: 5.0,
-    image: "/assets/product-4.jpe",
-    category: "cat treats",
-    categoryLabel: "Cat Treats",
-    sizes: ["2 oz", "4 oz"],
-    weight: "2 oz",
+    id: "5",
+    name: "Turkey Recipe",
+    slug: "turkey-recipe",
+    price: 25.0,
+    image: "/assets/product-5.jpe",
+    category: "dry food",
+    categoryLabel: "Dry Food",
+    sizes: ["3 lb", "6 lb"],
+    weight: "3 lb",
     description:
-      "Pure organic turkey liver and breast treats baked to crispy perfection. Ideal for positive training reinforcement and everyday bonding.",
+      "Ocean fresh salmon and turkey kibble paired with holistic herbs and probiotics. Formulated to optimize feline digestion and support silky coat shine.",
     productInfo:
-      "Slowly roasted organic turkey with zero grains, zero gluten, and zero artificial flavors.",
+      "Real turkey and wild caught salmon meal, lentils, dried kelp, and live active probiotics for balanced intestinal flora.",
     shippingInfo:
-      "Orders dispatched quickly from local fulfillment centers.",
+      "Complimentary express shipping on all multi bag bundles.",
     refundPolicy:
-      "Thirty day complete peace of mind guarantee on all treats.",
+      "Try with total confidence backed by our thirty day refund policy.",
     inStock: true,
     featured: true,
   },
@@ -130,6 +112,7 @@ export const products: Product[] = [
 export const categories: CategoryItem[] = [
   { id: "all", label: "All Products" },
   { id: "wet food", label: "Wet Food" },
+  { id: "dry food", label: "Dry Food" },
   { id: "cat treats", label: "Cat Treats" },
   { id: "favorite recipes", label: "Favorite Recipes" },
 ];

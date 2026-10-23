@@ -1,28 +1,26 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { siteData } from "@/data/siteData";
 
 export default function PromiseSection() {
   const { promise } = siteData;
   const sectionRef = useRef<HTMLElement>(null);
-  const [rotation, setRotation] = useState(0);
+  const ringRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     let animationFrameId: number;
 
     const handleScroll = () => {
-      if (!sectionRef.current) return;
+      if (!sectionRef.current || !ringRef.current) return;
       const rect = sectionRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
 
-      if (rect.bottom >= 0 && rect.top <= windowHeight) {
-        const totalDistance = windowHeight + rect.height;
-        const currentDistance = windowHeight - rect.top;
-        const progress = Math.max(0, Math.min(1, currentDistance / totalDistance));
-        const angle = progress * 180;
-        setRotation(angle);
+      if (rect.bottom >= -300 && rect.top <= windowHeight + 300) {
+        const centerOffset = windowHeight / 2 - (rect.top + rect.height / 2);
+        const angle = centerOffset * 0.25;
+        ringRef.current.style.transform = `rotate(${angle}deg)`;
       }
     };
 
@@ -32,10 +30,12 @@ export default function PromiseSection() {
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
     handleScroll();
 
     return () => {
       window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
@@ -47,18 +47,19 @@ export default function PromiseSection() {
     >
       <div className="max-w-7xl mx-auto">
         {promise.sectionTitle && (
-          <div className="text-center sm:text-left mb-8 sm:mb-12">
-            <span className="text-xs sm:text-sm uppercase tracking-widest text-[#C5C622] font-semibold">
+          <div className="text-center sm:text-left mb-6 sm:mb-10">
+            <span className="text-sm text-[#E2D8CC] font-normal tracking-normal opacity-90">
               {promise.sectionTitle}
             </span>
           </div>
         )}
 
         <div className="relative min-h-[520px] lg:min-h-[640px] flex items-center justify-center">
-          <div className="relative w-[280px] sm:w-[380px] lg:w-[460px] aspect-square flex items-center justify-center">
+          <div className="relative w-[300px] sm:w-[400px] lg:w-[460px] aspect-square flex items-center justify-center">
+            {/* Dashed outer ring with 3 feature dots */}
             <div
-              className="absolute inset-[-14%] sm:inset-[-18%] z-0 pointer-events-none transition-transform duration-75 ease-out will-change-transform"
-              style={{ transform: `rotate(${rotation}deg)` }}
+              ref={ringRef}
+              className="absolute inset-[-14%] sm:inset-[-18%] z-0 pointer-events-none transition-transform duration-100 ease-out will-change-transform"
               aria-hidden="true"
             >
               <svg
@@ -67,59 +68,59 @@ export default function PromiseSection() {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
+                {/* Outer dashed circle */}
                 <circle
                   cx="300"
                   cy="300"
                   r="276"
-                  stroke="rgba(255, 255, 255, 0.42)"
+                  stroke="rgba(255, 255, 255, 0.4)"
                   strokeWidth="1.2"
                   strokeDasharray="4 4"
                 />
 
-                <g transform="translate(24, 300)">
+                {/* Left Dot (Organic Certified - angle -164.0 deg) */}
+                <g transform="translate(34.7, 223.9)">
                   <circle
                     r="8.5"
                     fill="#34241D"
                     stroke="rgba(255, 255, 255, 0.9)"
                     strokeWidth="1.5"
                   />
-                  <circle r="3.5" fill="#FFFFFF" />
+                  <circle r="4" fill="#FFFFFF" />
                 </g>
 
-                <g transform="translate(515, 155)">
+                {/* Top Right Dot (Zero Fillers - angle -44.3 deg) */}
+                <g transform="translate(497.5, 107.2)">
                   <circle
                     r="8.5"
                     fill="#34241D"
                     stroke="rgba(255, 255, 255, 0.9)"
                     strokeWidth="1.5"
                   />
-                  <circle r="3.5" fill="#FFFFFF" />
+                  <circle r="4" fill="#FFFFFF" />
                 </g>
 
-                <g transform="translate(240, 566)">
+                {/* Bottom Left Dot (angle +113.2 deg) */}
+                <g transform="translate(191.3, 553.7)">
                   <circle
                     r="8.5"
                     fill="#34241D"
                     stroke="rgba(255, 255, 255, 0.9)"
                     strokeWidth="1.5"
                   />
-                  <circle r="3.5" fill="#FFFFFF" />
+                  <circle r="4" fill="#FFFFFF" />
                 </g>
               </svg>
             </div>
 
-            <div className="relative z-10 w-full h-full rounded-full overflow-hidden shadow-2xl">
+            {/* Split food bowl with internal divider */}
+            <div className="relative z-10 w-full h-full drop-shadow-[0_20px_35px_rgba(0,0,0,0.45)]">
               <Image
                 src={promise.centerGraphic}
                 alt="Honest nutrition split bowl with fresh organic ingredients and wholesome recipe"
                 fill
                 priority
                 className="object-contain"
-              />
-
-              <div
-                className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-[2px] bg-white z-20 pointer-events-none shadow-sm"
-                aria-hidden="true"
               />
             </div>
           </div>
