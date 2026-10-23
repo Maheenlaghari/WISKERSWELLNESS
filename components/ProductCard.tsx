@@ -19,10 +19,10 @@ export default function ProductCard({ product }: ProductCardProps) {
   );
 
   return (
-    <div className="group flex flex-col justify-between bg-[#EFE9DF] text-[#241812] transition-all hover:shadow-xl">
+    <div className="group flex flex-col justify-between bg-[#ECE5DC] text-[#241812] transition-all hover:shadow-lg">
       <div className="relative aspect-square w-full overflow-hidden p-4">
         {product.badge && (
-          <span className="absolute top-3 left-3 z-10 text-[10px] font-semibold px-2.5 py-0.5 bg-[#241812] text-white">
+          <span className="absolute top-2.5 left-2.5 z-10 text-[9px] font-semibold px-2 py-0.5 bg-[#1F140F] text-white">
             {product.badge}
           </span>
         )}
@@ -35,13 +35,13 @@ export default function ProductCard({ product }: ProductCardProps) {
             src={product.image}
             alt={product.name}
             fill
-            className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
+            className="object-contain p-2 transition-transform duration-300 group-hover:scale-102"
           />
         </Link>
 
-        <div className="absolute bottom-3 right-3 z-20">
+        <div className="absolute bottom-2.5 right-2.5 z-20">
           {cartItem ? (
-            <div className="flex items-center space-x-1.5 bg-white/95 backdrop-blur-xs border border-stone-300 rounded-full px-2 py-1 shadow-sm">
+            <div className="flex items-center space-x-1.5 bg-white border border-stone-300 rounded-full px-2 py-1 shadow-xs">
               <button
                 type="button"
                 onClick={() =>
@@ -51,7 +51,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                     cartItem.quantity - 1
                   )
                 }
-                className="text-stone-700 hover:text-black p-0.5"
+                className="text-stone-700 hover:text-black p-0.5 cursor-pointer"
                 aria-label="Decrease quantity"
               >
                 <Minus className="w-3 h-3" />
@@ -68,7 +68,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                     cartItem.quantity + 1
                   )
                 }
-                className="text-stone-700 hover:text-black p-0.5"
+                className="text-stone-700 hover:text-black p-0.5 cursor-pointer"
                 aria-label="Increase quantity"
               >
                 <Plus className="w-3 h-3" />
@@ -78,7 +78,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             <button
               type="button"
               onClick={() => addToCart(product, 1)}
-              className="w-8 h-8 rounded-full bg-white/95 hover:bg-white text-[#241812] border border-stone-300 flex items-center justify-center shadow-sm hover:scale-110 transition-transform cursor-pointer"
+              className="w-7 h-7 rounded-full bg-white hover:bg-stone-100 text-[#241812] border border-stone-300 flex items-center justify-center shadow-xs hover:scale-105 transition-transform cursor-pointer"
               aria-label={`Add ${product.name} to cart`}
             >
               <Plus className="w-4 h-4" />
@@ -87,15 +87,15 @@ export default function ProductCard({ product }: ProductCardProps) {
         </div>
       </div>
 
-      <div className="p-4 pt-3 border-t border-[#E2D9CC] flex flex-col justify-between flex-1">
+      <div className="px-4 pb-4 pt-1 flex flex-col justify-between flex-1">
         <Link href={`/shop/${product.slug}`}>
-          <h3 className="text-xs sm:text-sm font-medium tracking-tight hover:text-[#8E8B18] transition-colors line-clamp-1">
+          <h3 className="text-xs sm:text-sm font-medium tracking-tight text-[#241812] group-hover:text-[#9A9B1A] transition-colors line-clamp-1">
             {product.name}
           </h3>
         </Link>
 
-        <div className="flex items-center space-x-2 mt-1.5">
-          <span className="text-xs sm:text-sm font-semibold">
+        <div className="flex items-center space-x-2 mt-1">
+          <span className="text-xs sm:text-sm font-semibold text-[#241812]">
             ${product.price.toFixed(2)}
           </span>
           {product.originalPrice && (

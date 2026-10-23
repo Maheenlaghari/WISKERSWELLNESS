@@ -91,21 +91,20 @@ export default function ShopPage() {
               </button>
 
               {priceOpen && (
-                <div className="pt-4 space-y-3">
+                <div className="pt-3 space-y-2">
                   <input
                     type="range"
                     min={5}
                     max={45}
                     value={maxPrice}
                     onChange={(e) => setMaxPrice(Number(e.target.value))}
-                    className="w-full h-1 bg-stone-600 rounded-lg appearance-none cursor-pointer"
+                    className="w-full h-1 bg-stone-700 rounded-lg appearance-none cursor-pointer"
                   />
-                  <div className="flex justify-between text-xs text-stone-300">
-                    <span>$5</span>
+                  <div className="flex justify-between text-xs pt-1">
                     <span className="text-[#C5C622] font-semibold">
                       Up to ${maxPrice}
                     </span>
-                    <span>$45</span>
+                    <span className="text-stone-400">$45</span>
                   </div>
                 </div>
               )}

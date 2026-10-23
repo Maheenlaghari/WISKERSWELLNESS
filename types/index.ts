@@ -51,3 +51,13 @@ export interface SiteConfig {
   socialLinks: { label: string; href: string }[];
   footerLinks: { label: string; href: string }[];
 }
+
+export interface User {
+  id: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  catName?: string;
+  memberSince: string;
+  token?: string;
+}

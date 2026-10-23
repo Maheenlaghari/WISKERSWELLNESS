@@ -209,14 +209,14 @@ export default function ProductDetailClient({ id }: { id: string }) {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Share on Facebook"
-                  className="hover:text-white transition-colors"
+                  className="w-7 h-7 rounded-full bg-[#ECE5DC] hover:bg-[#C5C622] text-[#241812] flex items-center justify-center transition-colors"
                 >
                   <svg
-                    className="w-4 h-4 fill-current"
+                    className="w-3.5 h-3.5 fill-current"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                   </svg>
                 </a>
                 <a
@@ -224,14 +224,14 @@ export default function ProductDetailClient({ id }: { id: string }) {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Share on Pinterest"
-                  className="hover:text-white transition-colors"
+                  className="w-7 h-7 rounded-full bg-[#ECE5DC] hover:bg-[#C5C622] text-[#241812] flex items-center justify-center transition-colors"
                 >
                   <svg
-                    className="w-4 h-4 fill-current"
+                    className="w-3.5 h-3.5 fill-current"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path d="M12 0a12 12 0 0 0-4.37 23.18c-.03-.94-.06-2.39.05-3.42l.83-3.52s-.21-.42-.21-1.04c0-.98.57-1.71 1.28-1.71.6 0 .89.45.89 1 0 .61-.39 1.51-.59 2.35-.17.7.35 1.27 1.04 1.27 1.25 0 2.21-1.32 2.21-3.22 0-1.68-1.21-2.86-2.94-2.86-2.14 0-3.4 1.6-3.4 3.26 0 .65.25 1.34.56 1.72.06.07.07.14.05.21l-.21.86c-.03.14-.12.19-.24.13-1-.46-1.63-1.92-1.63-3.09 0-2.52 1.83-4.83 5.28-4.83 2.8 0 4.98 2 4.98 4.67 0 2.78-1.75 5.02-4.18 5.02-.82 0-1.58-.42-1.85-.92l-.5 1.9c-.18.7-.68 1.58-1.01 2.12A12 12 0 1 0 12 0z" />
+                    <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.69 0 1.026-.65 2.565-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.357-.053.218-.173.265-.4.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z" />
                   </svg>
                 </a>
                 <a
@@ -239,10 +239,10 @@ export default function ProductDetailClient({ id }: { id: string }) {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Share on WhatsApp"
-                  className="hover:text-white transition-colors"
+                  className="w-7 h-7 rounded-full bg-[#ECE5DC] hover:bg-[#C5C622] text-[#241812] flex items-center justify-center transition-colors"
                 >
                   <svg
-                    className="w-4 h-4 fill-current"
+                    className="w-3.5 h-3.5 fill-current"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -254,7 +254,7 @@ export default function ProductDetailClient({ id }: { id: string }) {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Share on X"
-                  className="hover:text-white transition-colors"
+                  className="w-7 h-7 rounded-full bg-[#ECE5DC] hover:bg-[#C5C622] text-[#241812] flex items-center justify-center transition-colors"
                 >
                   <svg
                     className="w-3.5 h-3.5 fill-current"

@@ -113,5 +113,5 @@ export const siteData = {
     consentText: "Yes, subscribe me to your newsletter. *",
     buttonText: "Submit",
   },
-  copyrightText: "© 2035 ValiuWhiskers. Powered and secured by Wix.",
+  copyrightText: "© 2026 WhiskersWellness.",
 };

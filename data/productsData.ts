@@ -1,4 +1,4 @@
-import { Product } from "@/types";
+import { Product, CategoryItem } from "@/types";
 
 export const products: Product[] = [
   {
@@ -125,76 +125,11 @@ export const products: Product[] = [
     inStock: true,
     featured: true,
   },
-  {
-    id: "7",
-    name: "Chicken Recipe",
-    slug: "chicken-recipe",
-    price: 19.0,
-    originalPrice: 25.0,
-    badge: "Sale",
-    image: "/assets/product-3.jpe",
-    category: "dry food",
-    categoryLabel: "Dry Food",
-    sizes: ["3 lb", "6 lb"],
-    weight: "3 lb",
-    description:
-      "Crisp extruded kibble made with high proportion fresh deboned chicken and ancient grains. Delivers sustained energy and optimal dental cleaning action.",
-    productInfo:
-      "Fresh deboned chicken, green peas, chickpeas, organic flaxseed, and natural antioxidant rosemary extract.",
-    shippingInfo:
-      "Heavy duty resealable packaging delivered safely to your doorstep.",
-    refundPolicy:
-      "Full refund guarantee if your cat does not eagerly finish the bag.",
-    inStock: true,
-    featured: true,
-  },
-  {
-    id: "8",
-    name: "Salmon Recipe",
-    slug: "salmon-recipe",
-    price: 25.0,
-    image: "/assets/product-5.jpe",
-    category: "dry food",
-    categoryLabel: "Dry Food",
-    sizes: ["3 lb", "6 lb"],
-    weight: "3 lb",
-    description:
-      "Ocean fresh salmon kibble paired with holistic herbs and probiotics. Formulated to optimize feline digestion and support silky coat shine.",
-    productInfo:
-      "Wild caught salmon meal, lentils, dried kelp, and live active probiotics for balanced intestinal flora.",
-    shippingInfo:
-      "Complimentary express shipping on all multi bag bundles.",
-    refundPolicy:
-      "Try with total confidence backed by our thirty day refund policy.",
-    inStock: true,
-  },
-  {
-    id: "9",
-    name: "Turkey Recipe",
-    slug: "turkey-recipe",
-    price: 25.0,
-    image: "/assets/product-5.jpe",
-    category: "dry food",
-    categoryLabel: "Dry Food",
-    sizes: ["3 lb", "6 lb"],
-    weight: "3 lb",
-    description:
-      "Rich protein dry formula packed with free range turkey and farm garden greens. Specifically proportioned to support lean muscle maintenance.",
-    productInfo:
-      "Real roasted turkey, whole cranberries, chia seeds, and chelated zinc for strong immune defense.",
-    shippingInfo:
-      "Fresh batch packing with expedited courier delivery.",
-    refundPolicy:
-      "Risk free trial with prompt refunds on request.",
-    inStock: true,
-  },
 ];
 
-export const categories = [
+export const categories: CategoryItem[] = [
   { id: "all", label: "All Products" },
-  { id: "dry food", label: "Dry Food" },
   { id: "wet food", label: "Wet Food" },
   { id: "cat treats", label: "Cat Treats" },
   { id: "favorite recipes", label: "Favorite Recipes" },
-  { id: "sale", label: "Sale" },
 ];

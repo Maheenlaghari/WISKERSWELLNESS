@@ -5,10 +5,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { User, ShoppingBag, Menu, X } from "lucide-react";
 import { useCart } from "@/context/CartContext";
+import { useAuth } from "@/context/AuthContext";
 import { siteData } from "@/data/siteData";
 
 export default function Header() {
   const { totalItems, setIsCartOpen } = useCart();
+  const { user } = useAuth();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const isOverlay = usePathname() === "/";
 
@@ -52,13 +54,15 @@ export default function Header() {
           </div>
 
           <div className="flex items-center space-x-4 sm:space-x-5">
-            <button
-              type="button"
+            <Link
+              href="/login"
               className="hidden sm:flex items-center space-x-1.5 hover:opacity-75 transition-opacity cursor-pointer"
             >
               <User className="w-4 h-4" />
-              <span className="text-xs sm:text-sm">Log In</span>
-            </button>
+              <span className="text-xs sm:text-sm font-medium">
+                {user ? user.firstName : "Log In"}
+              </span>
+            </Link>
 
             <button
               type="button"
@@ -98,10 +102,14 @@ export default function Header() {
               </Link>
             ))}
             <div className="pt-2 border-t border-[#A8A919] flex items-center justify-between text-xs">
-              <span className="flex items-center space-x-1.5">
+              <Link
+                href="/login"
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center space-x-1.5 hover:opacity-80"
+              >
                 <User className="w-3.5 h-3.5" />
-                <span>Log In</span>
-              </span>
+                <span>{user ? user.firstName : "Log In"}</span>
+              </Link>
               <span>{siteData.announcement}</span>
             </div>
           </div>
