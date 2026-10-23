@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ValiuWhiskers
 
-## Getting Started
+Theme provided by Undiegravity.
 
-First, run the development server:
+## Project Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+* Complete e-commerce store frontend for premium organic feline nourishment.
+* Hero showcase with custom typography and promotional banner.
+* Explore our recipes dual split showcases with full responsive scaling.
+* Nutritional promise section highlighting organic certification, zero fillers, and local sourcing.
+* Promotional incentive callout with instant discount activation.
+* Most loved recipe highlights with live inventory preview.
+* Interactive product catalog with category switching, price filtering, size filtering, and multi-criteria sorting.
+* Comprehensive product detail view with multi-size selection, quantity controls, expandable specifications, and social sharing.
+* Slide-out shopping cart drawer with live state management, quantity adjustment, subtotal calculations, and checkout simulation.
+* Responsive navigation with mobile menu and free shipping announcement bar.
+* Informational brand pages for about us, contact us, and retail store policies.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack and Versions
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* Next.js: 16.4.2
+* React: 19.3.0
+* React DOM: 19.3.0
+* TypeScript: 5.x
+* Tailwind CSS: 4.x
+* Lucide React: 1.16.0
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Backend API Endpoint List
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* GET /api/products : Retrieve list of products with optional query filtering by category and featured status.
+* GET /api/products/[id] : Retrieve detailed information for a single product by numeric identifier or url slug.
+* POST /api/cart : Synchronize customer shopping cart items with backend session storage.
+* POST /api/newsletter : Record visitor email address for marketing subscription dispatch.
+* POST /api/contact : Submit customer support inquiries and nutritional advice requests.
