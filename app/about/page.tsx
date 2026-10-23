@@ -32,7 +32,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
           <div className="relative aspect-square w-full overflow-hidden">
             <Image
-              src="/assests/sec-2-2.avif"
+              src="/assets/sec-2-2.avif"
               alt="Organic Essentials feline nutrition"
               fill
               className="object-cover"

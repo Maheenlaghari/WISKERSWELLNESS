@@ -35,7 +35,7 @@ export const siteData = {
       "Crafted from clean, wholesome ingredients to sustain your companion's natural vitality",
     ctaText: "Shop Now",
     ctaHref: "/shop",
-    backgroundImage: "/assests/hero-bg.png",
+    backgroundImage: "/assets/hero-bg.png",
   },
   recipesShowcase: {
     sectionTitle: "Explore Our Recipes",
@@ -44,7 +44,7 @@ export const siteData = {
         id: "biological-balance",
         titleLine1: "Biological",
         titleLine2: "Balance",
-        image: "/assests/sec-2-1.jpe",
+        image: "/assets/sec-2-1.jpe",
         href: "/shop?category=wet%20food",
         position: "top left",
       },
@@ -52,7 +52,7 @@ export const siteData = {
         id: "organic-essentials",
         titleLine1: "Organic",
         titleLine2: "Essentials",
-        image: "/assests/sec-2-2.avif",
+        image: "/assets/sec-2-2.avif",
         href: "/shop?category=dry%20food",
         position: "bottom left",
       },
@@ -60,7 +60,7 @@ export const siteData = {
   },
   promise: {
     sectionTitle: "Our Honest Promise",
-    centerGraphic: "/assests/sec-3-svg.png",
+    centerGraphic: "/assets/sec-3-svg.png",
     pillars: [
       {
         id: "organic",
@@ -96,14 +96,14 @@ export const siteData = {
       "Stock up on clean wellness and receive fifteen percent off your order.",
     ctaText: "Save Now",
     ctaHref: "/shop",
-    backgroundImage: "/assests/sec-4.jpe",
+    backgroundImage: "/assets/sec-4.jpe",
   },
   mostLoved: {
     titleLine1: "Most Loved",
     titleLine2: "Recipes",
     ctaText: "View All",
     ctaHref: "/shop",
-    featureImage: "/assests/sec-5.avif",
+    featureImage: "/assets/sec-5.avif",
   },
   newsletter: {
     title: "Join Our Pack",
